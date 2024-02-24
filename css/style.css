@@ -118,6 +118,79 @@ img {
   margin: 0;
 }
 
+.mob-menu {
+  width: 320px;
+  height: 640px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  padding: 24px 24px 40px 16px;
+}
+.menu-close-btn {
+  background-color: transparent;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  background-color: #e7e9fc;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.mob-menu-navigation {
+  margin-top: 48px;
+  margin-bottom: 168px;
+}
+.mob-menu-list {
+  transition: color 205ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-menu-nav-link {
+  font-size: 36px;
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #2e2f42;
+}
+.current {
+  position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #404bbf;
+}
+.mob-menu-adress {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+.mob-menu-adress-list {
+}
+.mob-menu-adress-link {
+}
+.mob-menu-links {
+}
+.mob-menu-media-list {
+}
+.mob-menu-media-item {
+}
+.mob-menu-media-item-link {
+}
+.mob-menu-media-icon {
+}
+.media-item {
+}
+.media-item-link {
+}
+.media-icon {
+}
+
 @media screen and (min-width: 768px) {
   .logo {
     margin-right: 120px;
@@ -751,26 +824,22 @@ img {
 
 /*===========FOOTER============*/
 
-.footer-container {
-  display: flex;
-  /* new */
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  /* new */
-  /* align-items: baseline; */
-  width: 100%;
-  /* max-width: 1158px; */
-  max-width: 360px;
-  padding: 0 16px;
-  margin: 0 auto;
-}
-
 .footer {
   background: #2e2f42;
   /* padding: 100px 0 100px; */
   padding: 96px 0 96px;
+}
+
+.footer-container {
+  /* display: flex; */
+  /* align-items: baseline; */
+  width: 100%;
+  /* new */
+  text-align: center;
+  /* new */
+  /* max-width: 1158px; */
+  max-width: 360px;
+  padding: 0 16px;
 }
 
 .info-container {
@@ -786,6 +855,8 @@ img {
   text-transform: uppercase;
   /* margin-right: auto; */
   display: inline-block;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 16px;
 }
 
@@ -827,6 +898,8 @@ img {
   /* new */
   margin-bottom: 72px;
   /* new */
+  align-items: center;
+  justify-content: center;
 }
 
 .media-item {
@@ -889,7 +962,7 @@ img {
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
-  /* padding-left: 16px; */
+  padding-left: 16px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   color: #ffffff;
@@ -920,17 +993,88 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  .footer {
+    background: #2e2f42;
+    /* padding: 100px 0 100px; */
+    padding: 96px 92px 96px 92px;
+  }
   .footer-container {
-    display: flex;
-    flex-direction: row;
     align-items: baseline;
     width: 100%;
+    text-align: left;
     max-width: 768px;
+    padding: 0 16px;
+  }
+
+  .footer-text {
+    max-width: 264px;
+    text-align: left;
+  }
+
+  .web-soc {
+    display: flex;
+    gap: 24px;
+  }
+
+  .media-list {
+    margin-bottom: 0;
+  }
+  .media-text {
+    text-align: left;
+  }
+  .form-text {
+    text-align: left;
+  }
+
+  .form-sub {
+    display: flex;
+    gap: 24px;
+  }
+
+  .form-btn {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .footer-container {
+    display: flex;
+    align-items: baseline;
+    max-width: 1158px;
     padding: 0 16px;
     margin: 0 auto;
   }
-}
-@media screen and (min-width: 1158px) {
+
+  .footer {
+    padding: 100px 0 100px;
+  }
+
+  .info-container {
+    margin-right: 120px;
+  }
+  .footer-logo {
+    margin-right: auto;
+  }
+
+  .footer-text {
+    margin-right: auto;
+    max-width: 264px;
+    margin: 0;
+  }
+
+  .media-list {
+    display: flex;
+    gap: 16px;
+  }
+
+  .form-main {
+    margin-left: auto;
+  }
+
+  .form-sub {
+    display: flex;
+    gap: 24px;
+  }
 }
 
 /*========================*/
@@ -1153,6 +1297,11 @@ img {
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #4d5ae5;
+}
+
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 1158px) {
 }
 
 /*====================*/
