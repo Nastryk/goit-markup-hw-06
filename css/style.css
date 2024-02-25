@@ -30,6 +30,8 @@ button {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -119,20 +121,21 @@ img {
 }
 
 .mob-menu {
-  width: 320px;
-  height: 640px;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
   background-color: #fff;
-  padding: 24px 24px 40px 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding: 48px 24px 40px 24px;
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
 .menu-close-btn {
   background-color: transparent;
   position: absolute;
@@ -177,6 +180,8 @@ img {
 }
 
 .mob-menu-nav-link {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.11111;
   letter-spacing: 0.02em;
@@ -196,14 +201,16 @@ img {
   color: #434455;
 }
 .mob-menu-adress-list {
+  margin-bottom: 48px;
 }
 .mob-menu-adress-link {
+  color: #434455;
 }
 .mob-menu-adress-item:not(:last-child) {
   margin-bottom: 24px;
 }
 .mob-menu-links {
-  margin-top: 48px;
+  bottom: 0;
 }
 .mob-menu-media-list {
   display: flex;
@@ -307,6 +314,10 @@ img {
   .open-menu-btn {
     display: none;
   }
+
+  .mob-menu {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -322,6 +333,9 @@ img {
   .adress-link {
     font-size: 16px;
     line-height: 1.5;
+  }
+  .mob-menu {
+    display: none;
   }
 }
 
@@ -609,7 +623,7 @@ img {
   display: flex;
   /* new */
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: 72px;
   align-items: center;
   /* new */
 }
@@ -691,8 +705,8 @@ img {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    row-gap: 24px;
-    column-gap: 64px;
+    row-gap: 64px;
+    column-gap: 24px;
     justify-content: center;
   }
   .team-item {
@@ -883,6 +897,7 @@ img {
   width: 100%;
   /* new */
   text-align: center;
+  margin: 0 auto;
   /* new */
   /* max-width: 1158px; */
   max-width: 360px;
@@ -891,6 +906,7 @@ img {
 
 .info-container {
   /* margin-right: 120px; */
+  margin-bottom: 72px;
 }
 .footer-logo {
   color: #4d5ae5;
@@ -922,7 +938,7 @@ img {
   max-width: 288px;
   /* margin-left: 0; */
   /* new */
-  margin-bottom: 72px;
+
   text-align: left;
   /* new */
 }
@@ -1043,13 +1059,14 @@ img {
   .footer {
     background: #2e2f42;
     /* padding: 100px 0 100px; */
-    padding: 96px 92px 96px 92px;
+    padding: 96px 0 96px 0;
   }
+
   .footer-container {
     align-items: baseline;
     width: 100%;
     text-align: left;
-    max-width: 768px;
+    max-width: 584px;
     padding: 0 16px;
   }
 
